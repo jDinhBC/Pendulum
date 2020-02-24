@@ -86,11 +86,10 @@ while not crashed:
         ang1 += a1vel
         ang2 += a2vel
 
-        """Can introduce a slight reduction to act as air resistance"""
-        """
+        """Introduce a slight reduction to act as air resistance"""
+
         a1vel = a1vel * 0.999
         a2vel = a2vel * 0.999
-        """
 
         """Combining equations for the Equation of Motion for object 1"""
         eqp1 = -g * (2 * m1 + m2) * math.sin(ang1)
@@ -111,9 +110,9 @@ while not crashed:
         """Removes clutter from excessive trailing dots"""
         paths1.append(object1)
         paths2.append(object2)
-        if len(paths1) >= 300:
+        if len(paths1) >= 500:
             paths1.remove(paths1[0])
-        if len(paths2) >= 300:
+        if len(paths2) >= 500:
             paths2.remove(paths2[0])
 
         """Calls Draw Function"""
