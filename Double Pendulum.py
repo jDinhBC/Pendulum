@@ -59,6 +59,7 @@ def draw(list1, list2, color1, color2, color3, color4, object1pos, object2pos, m
     pygame.draw.circle(screen, color4, object1pos, mass1)
     pygame.draw.circle(screen, color4, object2pos, mass2)
     pygame.display.update()
+    screen.fill(white)
 
 draw(paths1,paths2,blue,green,black,red,object1,object2,m1,m2)
 
@@ -115,12 +116,8 @@ while not crashed:
         if len(paths2) >= 500:
             paths2.remove(paths2[0])
 
-        """Calls Draw Function"""
+        """Calls Draw Function and update Frames"""
         draw(paths1,paths2,blue,green,black,red,object1,object2,m1,m2)
-
-        """Updates Frames"""
-        pygame.display.update()
-        screen.fill(white)
 
 pygame.quit()
 quit()
