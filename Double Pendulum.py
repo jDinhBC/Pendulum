@@ -86,9 +86,11 @@ while not crashed:
         ang1 += a1vel
         ang2 += a2vel
 
-        """Introduced a slight reduction to act as air resistance"""
+        """Can introduce a slight reduction to act as air resistance"""
+        """
         a1vel = a1vel * 0.999
         a2vel = a2vel * 0.999
+        """
 
         """Combining equations for the Equation of Motion for object 1"""
         eqp1 = -g * (2 * m1 + m2) * math.sin(ang1)
